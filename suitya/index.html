@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>A Comet's Journey</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fondamento:ital@0;1&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lilita+One&family=Mrs+Saint+Delafield&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fondamento:ital@0;1&family=Zen+Dots&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Samaritan&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+
+    <style>
+        html, body {
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            margin: 0;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        .fondamento-regular {
+            font-family: "Fondamento", serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        .mrs-saint-delafield-regular {
+            font-family: "Mrs Saint Delafield", serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        .zen-dots-regular {
+            font-family: "Zen Dots", serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        .noto-sans-samaritan-regular {
+            font-family: "Noto Sans Samaritan", serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        .noto-sans-jp6 {
+            font-family: "Noto Sans JP", serif;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        .container {
+            position: relative;
+            width: 40%; 
+            height: 500px;
+            border: transparent;
+        }
+        
+        .slide1 {
+            background-image: url('images/s1bg2.png'), url('images/s1bg1.png');
+            width: 100vw;
+            height: 100vh;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+            z-index: 2;
+        }
+
+        h1 {
+            font-family: "Mrs Saint Delafield", serif;
+            letter-spacing: 2px;
+            font-size: 150px;
+            padding-left: 200px;
+            padding-top: 100px;
+            color: #465f99;
+            position: absolute;
+            z-index: 1;
+        }
+        
+        h2 {
+            font-family: "Fondamento", serif;
+            letter-spacing: 2px;
+            font-size: 65px;
+            padding-left: 70px;
+            padding-top: 160px;
+            padding-bottom: 0px;
+            color: #5876bd;
+            position: absolute;
+            z-index: 2;
+        }
+
+        .s {
+            vertical-align: 0.2em;
+        }
+        
+        .slide2 {
+            background-color: aliceblue;
+            width: 100vw;
+            height: 100vh;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+        }
+
+        .container1 {
+            position: absolute;
+            width: 100%; 
+            height: 700px;
+            border: transparent;
+        }
+
+        .hoshi {
+            padding-left: 1100px;
+            padding-top: 150px;
+            font-family: "Noto Sans Samaritan", serif;
+            font-weight: 600;
+            font-size: 40px;
+            position: absolute;
+        }
+
+        .star {
+            padding-left: 1215px;
+            padding-top: 220px;
+            font-family: "Noto Sans JP", serif;
+            font-weight: 400;
+            font-size: 20px;
+            position: absolute;
+        }
+
+        .tutut {
+            padding-left: 950px;
+            padding-top: 330px;
+            font-family: "Noto Sans Samaritan", serif;
+            color: #1b1b3d;
+            position: absolute;
+        }
+
+        .sui {
+            font-size: 27px;
+            font-weight: 600;
+        }
+
+        .bacharu {
+            font-size: 22px;
+            font-weight: 400;
+        }
+
+        .skibidisuisei {
+            position: absolute;
+            top: 250px;
+            left: 100px;
+        }
+
+        button {
+            border: none;
+            color: aliceblue;
+            padding: 15px 90px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-family: "Noto Sans Samaritan", serif;
+            color: #1b1b3d;
+            font-size: 16px;
+            margin-top: 550px;
+            transition-duration: 0.4s;
+            cursor: pointer;
+        }
+
+        .twitter {
+            background-color: aliceblue; 
+            color: #1b1b3d;
+            border: 2px solid #465f99;
+            margin-left: 900px;
+        }
+
+        .twitter:hover {
+            background-color: #465f99; 
+            color: aliceblue;
+        }
+
+        .youtube {
+            background-color: aliceblue; 
+            color: #1b1b3d;
+            border: 2px solid #465f99;
+        }
+
+        .youtube:hover {
+            background-color: #465f99; 
+            color: aliceblue;
+        }
+
+        .spotify {
+            background-color: aliceblue; 
+            color: #1b1b3d;
+            border: 2px solid #465f99;
+        }
+
+        .spotify:hover {
+            background-color: #465f99; 
+            color: aliceblue;
+        }
+        
+        .box1 {
+            background-color: #465f99;
+            width: 94vw;
+            height: 15vh;
+            margin-left: 40px;
+            margin-right: 28px;
+            margin-bottom: 100px;
+            border-radius: 25px;
+            position: absolute;
+            top: 105vh;
+            z-index: 3;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .intro {
+            color: aliceblue;
+            text-align: center;
+            margin: 0;
+            font-family: "Zen Dots", serif;
+            font-weight: 700;
+            font-size: 50px;
+            letter-spacing: 5px;
+        }
+
+        .slide3 {
+            background-color: #333;
+            width: 100vw;
+            height: 100vh;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+        }
+
+        .box2 {
+            background-color: #465f99;
+            width: 94vw;
+            height: 15vh;
+            margin-left: 40px;
+            margin-right: 28px;
+            margin-top: 810px;
+            border-radius: 25px;
+            position: absolute;
+            top: 105vh;
+            z-index: 4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .woohooo {
+            color: #333;
+            text-align: center;
+            margin: 0;
+            font-family: "Zen Dots", serif;
+            font-weight: 700;
+            font-size: 50px;
+            letter-spacing: 5px;
+        }
+
+        .saikou, .meh, .neww {
+            width: 130px;
+            position: absolute; 
+        }
+
+        .saikou {
+            padding-top: 200px;
+            padding-left: 150px;
+        }
+
+        .meh {
+            padding-top: 400px;
+            padding-left: 150px;
+        }
+
+        .neww {
+            padding-top: 600px;
+            padding-left: 150px;
+        }
+
+        table, th, td {
+            width: 60%;
+            height: 50%;
+            border:2px solid #fff;
+            color: antiquewhite;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="slide1">
+            <h2>HOSHIMACHI</h2>
+            <h1>S<span class="s">uisei</span></h1>
+        </div>
+
+        <div class="slide2">
+            <div class="container1">
+            <p class="hoshi">Hoshimachi Suisei</p>
+            <p class="star">星街すいせい</p>
+            <p class="tutut">
+                <span class="sui">“A shooting star that appeared from diamonds <br>
+                in the rough; I'm the virtual idol Hoshimachi Suisei!” </span><br>
+                <br>
+                <span class="bacharu">A virtual idol with an exceptional love for songs and idols. <br>
+                She puts endless amounts of hard work and energy into her <br>
+                dream of performing at the Budokan one day.</span></p>
+
+                <video width="700"  controls class="skibidisuisei">
+                    <source src="vid/croppedver.mp4" type="video/mp4">
+                    Your browser does not support HTML video.
+                </video>
+
+                <a href="https://x.com/suisei_hosimati">
+                    <button class="twitter">Twitter</button>
+                </a>
+                <a href="https://www.youtube.com/@HoshimachiSuisei">
+                    <button class="youtube">YouTube</button>
+                </a>
+                <a href="https://open.spotify.com/artist/726WiFmWkohzodUxK3XjHX">
+                    <button class="spotify">Spotify</button>
+                </a>
+            </div>
+        </div>
+
+        <div class="slide3">
+            <a href="https://open.spotify.com/album/2HmlBFz06FldsdzwY1FHg4">
+                <img src="images/stillstillstellar.png" alt="Still Still Stellar" class="saikou">
+            </a>
+            <a href="https://open.spotify.com/album/5eQx95EHzDMcPurV2aByeh">
+                <img src="images/specter.png" alt="Specter" class="meh">
+            </a>
+            <a href="https://open.spotify.com/album/1mBitF64U7CZPQW7uEit3z">
+                <img src="images/shinseimokuroku.png" alt="Shinsei Roku Moku" class="neww">
+            </a>
+
+            <table style="position: relative; left: 500px; top: 300px;">
+                <tr>
+                    <th>Still Still Stellar</th>
+                    <th>Specter</th>
+                    <th>ShinseiMokuRoku</th>
+                </tr>
+                <tr>
+                    <td>Stellar Stellar</td>
+                    <td>Shakunetsu nite Junjou</td>
+                    <td>Pathfinder</td>
+                </tr>
+                <tr>
+                    <td>Next Color Planet</td>
+                    <td>TEMPLATE</td>
+                    <td>BIBIDEBA</td>
+                </tr>
+                <tr>
+                    <td>Tenkyuu, Suisei woa Yoru wo Mataide</td>
+                    <td>Michizure</td>
+                    <td>AWAKE</td>
+                </tr>
+                <tr>
+                    <td>GHOST</td>
+                    <td>Aseta Hanamidori</td>
+                    <td>Venus Bug</td>
+                </tr>
+                <tr>
+                    <td>bye bye rainy</td>
+                    <td>TRUE GIRL SHOW</td>
+                    <td>Caramel Pain</td>
+                </tr>
+                <tr>
+                    <td>Jibunkatte Dazzling</td>
+                    <td>My Happy Transmission</td>
+                    <td>Moonlight</td>
+                </tr>
+                <tr>
+                    <td>Bluerose</td>
+                    <td>debutante ball</td>
+                    <td>DEADPOOl</td>
+                </tr>
+                <tr>
+                    <td>comet</td>
+                    <td>7days</td>
+                    <td>Requiem</td>
+                </tr>
+                <tr>
+                    <td>Andromeda</td>
+                    <td>Damn Good Day</td>
+                    <td>XION</td>
+                </tr>
+                <tr>
+                    <td>Je t'aime.</td>
+                    <td>soirée</td>
+                    <td>cocoon and heart</td>
+                </tr>
+                <tr>
+                    <td>Starry Jet</td>
+                    <td>Newton</td>
+                    <td>Kireigoto</td>
+                </tr>
+                <tr>
+                    <td>Kakero</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+   
+        <div class="box1">
+            <p class="intro">INTRODUCTION</p>
+        </div>
+
+        <div class="box2">
+            <p class="woohooo">DISCOGRAPHY</p>
+        </div>
+</div>  
+</body>
+</html>
